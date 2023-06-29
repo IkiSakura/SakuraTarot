@@ -3,11 +3,14 @@ import Button from "../../components/Button/Button";
 import CardBack from "../../components/CardBack/CardBack";
 import "./Home.css";
 import CirgleImage from "../../assets/img/sakura-circulo.svg";
+import Header from "../../components/header/Header"
+import Footer from "../../components/Footer/Footer"
 
 
 export default function Home() {
     return (
         <div className="home-container">
+            <Header/>
             <h2>
                 Seleccione la tarjeta que crea que puede representar su situación actual
             </h2>
@@ -32,6 +35,7 @@ export default function Home() {
                         src={CirgleImage}
                         alt="Sakura golden card circle"
                     />
+                    <Footer/>
         </div>
     );
 }
