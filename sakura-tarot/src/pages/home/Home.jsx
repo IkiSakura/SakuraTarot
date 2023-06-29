@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 import CardContainer from "../../components/CardsContainer/CardsContainer";
 import Button from "../../components/Button/Button";
 import CardBack from "../../components/CardBack/CardBack";
@@ -8,6 +9,16 @@ import Footer from "../../components/Footer/Footer"
 
 
 export default function Home() {
+    const [selectedCards, setSelectedCards] = useState({});
+
+    const handleCardClick = (cardId, cardImage) => {
+      setSelectedCards((prevSelectedCards) => ({
+        ...prevSelectedCards,
+        [cardId]: cardImage,
+      }));
+    };
+  
+    
     return (
         <div className="home-container">
             <Header/>
