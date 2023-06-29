@@ -26,7 +26,7 @@ export default function Home() {
 
                 <div className="cards">
                     <CardContainer /> 
-                    <Button/>
+                    {/*<Button/>*/}
                 </div>
 
             </div>
