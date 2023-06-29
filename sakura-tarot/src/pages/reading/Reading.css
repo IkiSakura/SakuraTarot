@@ -1,0 +1,15 @@
+.reading-container{
+    position: relative;
+}
+
+
+
+.middle-circle{
+    position: absolute;
+    width: 30rem;
+    left: 32%;
+    top:125%;
+    opacity: 0.5;
+    z-index: -1;
+}
+

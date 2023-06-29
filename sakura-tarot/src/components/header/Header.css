@@ -3,7 +3,7 @@
     justify-content: flex-end;
     align-items: center;
     justify-content: space-between;
-    padding: 3rem;
+    padding: 1rem 4rem 1rem;
 }
 .logo-container{
     display: flex;
@@ -11,7 +11,7 @@
 }
 
 .link-ikisakura{
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     text-decoration: none;
     color: var(--accent-color);
 }
@@ -20,7 +20,7 @@
 }
 
 .link-lecturas{
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     text-decoration: none;
     color: var(--accent-color); 
 }
