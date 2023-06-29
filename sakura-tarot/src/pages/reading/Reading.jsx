@@ -1,11 +1,13 @@
-import {Link} from "react-router-dom"
+
+import Header from "../../components/header/Header"
 
 export default function Reading(){
     
     return (
      <div className="reading-container"> 
-        <h1>reading</h1>
-        <Link to="/" className="links">SoundWave</Link>
+            <>
+                <Header/>
+            </>
      </div>
     )
 

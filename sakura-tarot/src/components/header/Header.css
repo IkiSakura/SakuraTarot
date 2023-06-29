@@ -1,0 +1,29 @@
+.header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3rem;
+}
+.logo-container{
+    display: flex;
+    align-items: center;
+}
+
+.link-ikisakura{
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: var(--accent-color);
+}
+.link-ikisakura:hover{
+    color: var(--nav-hover);
+}
+
+.link-lecturas{
+    font-size: 1.2rem;
+    text-decoration: none;
+    color: var(--accent-color); 
+}
+.link-lecturas:hover {
+    color: var(--nav-hover);
+}
