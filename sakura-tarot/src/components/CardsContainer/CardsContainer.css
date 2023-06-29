@@ -1,0 +1,17 @@
+.card-container {
+    display: flex;
+    margin-top: 4rem;
+  }
+  
+  .past,
+  .present,
+  .future {
+    width: 127px;
+    height: 297px;
+    border: 1px dotted white;
+    margin: 0 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
