@@ -18,7 +18,7 @@ export default function App() {
   // console.log(data); // Muestra los datos en la consola
 
   return (
-    // {data ? ( 
+    // {data ? ( cd
     //   <ul>
     //   {data.map((card) => (
     //     <li key={card.id}>
