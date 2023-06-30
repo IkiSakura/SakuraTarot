@@ -1,8 +1,6 @@
 import Header from "../../components/header/Header"
 import CirgleImage from "../../assets/img/sakura-circulo.svg";
-import Button from "../../components/Button/Button";
 import Footer from "../../components/Footer/Footer"
-// import { useState } from "react";
 import "./Reading.css";
 
 const fakeData = [
@@ -39,16 +37,8 @@ const fakeData = [
 ]
 
 export default function Reading() {
-    // const [flippedCards, setFlippedCards] = useState([]);
-  
-    // const handleCardClick = (cardId) => {
-    //   if (flippedCards.includes(cardId)) {
-    //     setFlippedCards(flippedCards.filter((id) => id !== cardId));
-    //   } else {
-    //     setFlippedCards([...flippedCards, cardId]);
-    //   }
-    // };
-  
+    
+
     return (
         <div className="reading-container">
             <Header />
@@ -59,9 +49,7 @@ export default function Reading() {
                 <img className="middle-circle" src={CirgleImage} alt="" />
                  {fakeData.map((card) => (
                 <div className="card"
-            //   className={`card ${flippedCards.includes(card.id) ? 'flipped' : ''}`}
-            //   key={card.id}
-            //   onClick={() => handleCardClick(card.id)}
+            
                 >
               <div
                 className="front"
@@ -82,7 +70,6 @@ export default function Reading() {
           ))}
         </ul>
 
-       {/* <Button/>  */}
 
         <Footer />
 
