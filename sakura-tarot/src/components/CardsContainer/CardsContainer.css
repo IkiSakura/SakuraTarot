@@ -2,6 +2,12 @@
     display: flex;
     margin-top: 4rem;
   }
+
+  .pick-card-btn{
+    width: 2vw;
+    height: 2 vh;
+
+  }
   
   .past,
   .present,
@@ -13,5 +19,28 @@
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+
+  .reverse {
+    background-color: var(--bg-color);
+    color: var(--bg-color);
+    width: 127px;
+    height: 297px;
+    border: none;
+    margin: 0 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+  }
+
+  .reverse-pic{
+    width: 127px;
+    height: 297px;
+    background-color: var(--bg-color);
+    color: var(--bg-color);
+
+   
+    
   }
   

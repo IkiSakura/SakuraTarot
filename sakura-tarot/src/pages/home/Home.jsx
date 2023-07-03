@@ -8,6 +8,8 @@ import Footer from "../../components/Footer/Footer"
 
 
 export default function Home() {
+
+    
     return (
         <div className="home-container">
             <Header/>
@@ -20,7 +22,7 @@ export default function Home() {
                     <p>
                         Selecciona 3 cartas para leer sobre tu pasado, presente y futuro.
                     </p>
-                    <CardBack/>
+                    <CardBack handleClick={CardContainer.handleClick} />
                   
                 </div>
 
