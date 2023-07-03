@@ -31,7 +31,7 @@ function CardsContainer() {
   */}
   return (
 <div>
-<div className = "button-container" onClick = {handleClick}>
+<div className = "button-container">
     <button>Ver Cartas</button> {/*como le meto param a hanleclick¿?*/}
     </div>
 <div className="card-container">
