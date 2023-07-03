@@ -1,0 +1,20 @@
+.journal-container{
+    text-align: center;
+    color: var(--txt-color);
+    overflow: hidden;
+}
+
+h3{
+    padding-top: 3rem;
+    font-weight: 100;
+}
+
+.journal-circle{
+    position: absolute;
+    width: 40rem;
+    left: 70%;
+    top:15%;
+    opacity: 0.5;
+    z-index: -1;
+}
+

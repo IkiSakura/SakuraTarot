@@ -9,8 +9,19 @@ export default function Reading() {
     return (
         <div className="reading-container">
             <Header />
+         
+         <div className="cards-reading">
+         <div className="cards-open">
+            
+         </div>
+         
+         <Button text="Guardar mi lectura" route="/Journal" />
+         </div>
+
+
             <img className="middle-circle" src={CirgleImage}
              alt="Sakura golden card circle"/>
+
             <Footer/>
         </div>
 

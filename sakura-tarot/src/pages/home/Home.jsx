@@ -7,46 +7,30 @@ import CirgleImage from "../../assets/img/sakura-circulo.svg";
 import Header from "../../components/header/Header"
 import Footer from "../../components/Footer/Footer"
 
-
 export default function Home() {
-    const [selectedCards, setSelectedCards] = useState({});
-
-    const handleCardClick = (cardId, cardImage) => {
-      setSelectedCards((prevSelectedCards) => ({
-        ...prevSelectedCards,
-        [cardId]: cardImage,
-      }));
+    const [selectedCards, setSelectedCards] = useState([]);
+  
+    const handleCardClick = (card) => {
+      setSelectedCards((prevSelectedCards) => [...prevSelectedCards, card]);
     };
   
-    
     return (
-        <div className="home-container">
-            <Header/>
-            <h2>
-                Seleccione la tarjeta que crea que puede representar su situación actual
-            </h2>
-
-            <div className="tarot-container">
-                <div className="instructions">
-                    <p>
-                        Selecciona 3 cartas para leer sobre tu pasado, presente y futuro.
-                    </p>
-                    <CardBack/>
-                  
-                </div>
-
-                <div className="cards">
-                    <CardContainer /> 
-                    <Button/>
-                </div>
-
-            </div>
-            <img
-                        className="sakura-circle"
-                        src={CirgleImage}
-                        alt="Sakura golden card circle"
-                    />
-                    <Footer/>
+      <div className="home-container">
+   <Header/>
+        <h2>Seleccione la tarjeta que crea que puede representar su situación actual</h2>
+  
+        <div className="tarot-container">
+          <div className="instructions">
+            <p>Selecciona 3 cartas para leer sobre tu pasado, presente y futuro.</p>
+            <CardBack onCardClick={handleCardClick} />
+          </div>
+  
+          <div className="cards">
+            <CardContainer selectedCards={selectedCards} />
+            <Button text="Ver mi lectura" route="/reading" />
+          </div>
         </div>
+        <Footer/>
+      </div>
     );
-}
+  }

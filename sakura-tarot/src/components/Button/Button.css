@@ -1,13 +1,10 @@
-.button-readings{
+
+.link-reading{
     background-color: var(--accent-color);
     padding: 0.5rem 5rem;
     border-radius:0.3rem ;
     border: none;
     margin: 1rem 3rem;
-
-}
-
-.link-reading{
     color: var(--bg-color);
     text-decoration: none;
 }

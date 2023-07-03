@@ -1,14 +1,25 @@
 .reading-container{
     position: relative;
+    text-align: center;
 }
 
+.cards-readging{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    
+}
 
+.cards-open{
+    width: 100px;
+    height:520px;
+}
 
 .middle-circle{
     position: absolute;
     width: 30rem;
-    left: 32%;
-    top:125%;
+    left: 32.4%;
+    top:15%;
     opacity: 0.5;
     z-index: -1;
 }

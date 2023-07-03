@@ -3,11 +3,11 @@ import React from 'react';
 import './Button.css';
 
 
-const Button = () => {
+const Button = ({ text, route }) =>  {
   return (
-    <button className="button-readings">
-         <Link to="/reading" className="link-reading">Ver mi lectura</Link>
-    </button>
+    <Link to={route} className="link-reading" >
+    {text}
+   </Link>
   );
 };
 

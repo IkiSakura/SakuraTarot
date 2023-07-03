@@ -14,7 +14,7 @@ export default function Header() {
             </div>
 
             <div className="nav-container">
-                <Link to="/Reading" className="link-lecturas">Mis Lecturas</Link>  
+                <Link to="/Journal" className="link-lecturas">Mis Lecturas</Link>  
             </div>
         </div>
     )
