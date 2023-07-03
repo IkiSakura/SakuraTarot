@@ -1,40 +1,38 @@
 import React from "react";
 import './CardsContainer.css'
 import { useState } from "react";
-import cardsDB from '../../service/cardsDB';
-import ButtonReading from '../ButtonReading/ButtonReading'
 
+let [url, setURL] = useState ("https://i.ibb.co/XxrvMJ2/Reverso-Sakura.jpg")
 
 function CardsContainer() {
 
-
-let [url, setURL] = useState ('https://i.ibb.co/XxrvMJ2/Reverso-Sakura.jpg')
-
-const readingArray = [];
-function getRandomInt(max) {
-  return Math.floor(Math.random() * max);
-}
-
-function handleClick(){
-
-  let cardNumber = getRandomInt(55);
-  let newUrl = cardsDB[cardNumber].sakuraCard
-  console.log(newUrl)
-  
-  if (url == "https://i.ibb.co/XxrvMJ2/Reverso-Sakura.jpg"){
-    setURL(newUrl)     
-  } else { setURL("https://i.ibb.co/XxrvMJ2/Reverso-Sakura.jpg")}
-
-  if (arrayCards.length <= 3) {
-    arrayCards.push(newUrl)
-    console.log(arrayCards)
+  {/*
+  function getRandomInt(max) {
+    return Math.floor(Math.random() * max);
   }
-}
-
+  
+  const arrayCards = [];
+  
+  function handleClick(){
+  
+    let cardNumber = getRandomInt(55);
+    let newUrl = cardsDB[cardNumber].sakuraCard
+    console.log(newUrl)
+    
+    if (url == "https://i.ibb.co/XxrvMJ2/Reverso-Sakura.jpg"){
+      setURL(newUrl)     
+    } else { setURL("https://i.ibb.co/XxrvMJ2/Reverso-Sakura.jpg")}
+  
+    if (arrayCards.length <= 3) {
+      arrayCards.push(newUrl)
+      console.log(arrayCards)
+    }
+  }
+  */}
   return (
 <div>
-<div className = "button-container">
-    <button onClick={handleClick}>Ver Cartas</button>
+<div className = "button-container" onClick = {handleClick}>
+    <button>Ver Cartas</button> {/*como le meto param a hanleclick¿?*/}
     </div>
 <div className="card-container">
 
@@ -56,6 +54,5 @@ function handleClick(){
 }
 
 export default CardsContainer
-
 
 
