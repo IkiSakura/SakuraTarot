@@ -1,5 +1,6 @@
 import Header from "../../components/header/Header"
 import CirgleImage from "../../assets/img/sakura-circulo.svg";
+
 import "./Journal.css";
 
 

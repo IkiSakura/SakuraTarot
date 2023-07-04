@@ -5,7 +5,7 @@ import { fetchData } from '../../service/service';
 function CardBack({ onCardClick }) {
   const [randomCards, setRandomCards] = useState([]);
   const [selectedCards, setSelectedCards] = useState([]);
-
+console.log(selectedCards)
   useEffect(() => {
     fetchRandomCards();
   }, []);
@@ -34,7 +34,7 @@ function CardBack({ onCardClick }) {
 
     try {
       const data = await fetchData();
-      const card = data.find(card => card.id === cardId);
+      const card = data.find(card => card.id.sakuraCard.meaning === cardId);
       if (card) {
         console.log('Nueva carta seleccionada:', card);
         setSelectedCards([...selectedCards, cardId]); // Agregar la carta seleccionada al estado
