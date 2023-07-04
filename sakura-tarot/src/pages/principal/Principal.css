@@ -1,0 +1,25 @@
+
+.container-portada{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 4rem;
+}
+.portada-img{
+    width: 50%;
+    height: auto; 
+}
+
+.kinomoto{
+    width: 6%;
+    height: auto;
+    margin-bottom: 2rem;
+}
+
+.container-btn-img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 8rem;
+}
+
