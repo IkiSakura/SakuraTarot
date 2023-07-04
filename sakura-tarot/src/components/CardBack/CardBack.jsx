@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './CardBack.css';
 import { fetchData } from '../../service/service';
 
+const selectCardsOk = [];
 function CardBack({ onCardClick }) {
   const [randomCards, setRandomCards] = useState([]);
   const [selectedCards, setSelectedCards] = useState([]);
@@ -13,13 +14,19 @@ console.log(selectedCards)
   const fetchRandomCards = async () => {
     try {
       const data = await fetchData();
+      //console.log(data)
       const randomIndexes = getRandomIndexes(data.length, 6);
+      console.log(randomIndexes)
       const randomCards = randomIndexes.map(index => data[index]);
+      //const randomCards = randomCards.map(data => data)
+      //console.log(randomCards)
+  
       setRandomCards(randomCards);
     } catch (error) {
       console.error('Error fetching random cards:', error);
     }
   };
+  console.log(randomCards)
 
   const getRandomIndexes = (length, count) => {
     const indexes = Array.from({ length }, (_, index) => index);
@@ -34,7 +41,7 @@ console.log(selectedCards)
 
     try {
       const data = await fetchData();
-      const card = data.find(card => card.id.sakuraCard.meaning === cardId);
+      const card = data.find(card => card.id  === cardId);
       if (card) {
         console.log('Nueva carta seleccionada:', card);
         setSelectedCards([...selectedCards, cardId]); // Agregar la carta seleccionada al estado
@@ -47,6 +54,8 @@ console.log(selectedCards)
       console.error('Error fetching card:', error);
     }
   };
+  console.log('Selected cards:', selectedCards)
+ 
 
   return (
     <div className="deck-card-container">
