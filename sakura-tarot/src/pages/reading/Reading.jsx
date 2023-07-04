@@ -1,15 +1,15 @@
 import Header from "../../components/header/Header";
 import CirgleImage from "../../assets/img/sakura-circulo.svg";
 import Footer from "../../components/Footer/Footer";
-import Button from './components/btn/BtnModal';
-import Modal from './components/modal/Modal';
-import ThoughtsList from './components/thougtList/ThoughtsList';
+import Button from "../../components/btn/BtnModal";
+import Modal from "../../components/modal/Modal";
+import ThoughtsList from "../../components/thougtList/ThoughtsList";
+import React, { useState, useEffect } from 'react';
 import "./Reading.css";
 
 
 
 export default function Reading() {
-
     const [modalOpen, setModalOpen] = useState(false);
     const [savedThoughts, setSavedThoughts] = useState([]);
     const [thoughtsListOpen, setThoughtsListOpen] = useState(false);
@@ -66,9 +66,9 @@ export default function Reading() {
       <div className="secondary-page">
         <Header/>
             <h2>
-                Seleccione la tarjeta que crea que puede representar su situación actual
+            Pasa tu mano sobre la carta de tarot para revelar su significado.            
             </h2>
-        <Button onClick={handleOpenModal} label="Ver mi lectura" />
+        <Button onClick={handleOpenModal} label="Guardar mi lectura" />
         {modalOpen && (
           <Modal onClose={handleCloseModal} onSave={handleSaveThoughts} />
         )}
