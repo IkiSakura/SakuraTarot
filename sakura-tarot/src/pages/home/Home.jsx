@@ -27,7 +27,7 @@ export default function Home() {
             flipped={false}
           />
         </div>
-
+ 
         <div className="cards">
           <CardContainer />
           {/*<Button/>*/}
