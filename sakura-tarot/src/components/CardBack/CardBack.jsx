@@ -4,7 +4,7 @@ import './CardBack.css';
 
 
 
-const CardBack = ({handleClick}) => {
+const CardBack = () => {
 
   return (
    

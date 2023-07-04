@@ -41,3 +41,7 @@ h2{
     z-index: -1;
 }
 
+.deck-button{
+    padding:0;
+    width: 30vw;
+}
