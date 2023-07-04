@@ -1,0 +1,9 @@
+.sngl-card{
+    background-color: var(--bg-color);
+    border: solid white;
+    width: 6 vw;
+    height: 5 vh;
+margin-left: 2 rem;    
+    }
+
+  

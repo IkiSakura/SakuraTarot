@@ -5,13 +5,18 @@ import "./Home.css";
 import CirgleImage from "../../assets/img/sakura-circulo.svg";
 import Header from "../../components/header/Header";
 import Footer from "../../components/Footer/Footer";
-import {useState} from "react"
+import SingleCard from "../../components/SingleCard/SingleCard";
+import { useState } from "react";
+
 
 
 export default function Home () { 
 
-  const [reverse, setReverse] = (false)
-    
+const [flipped, setFlipped] = useState(false)
+
+function handleClick(){
+  setFlipped(true)
+}
 
   return (
     
@@ -26,15 +31,31 @@ export default function Home () {
           <p>
             Selecciona 3 cartas para leer sobre tu pasado, presente y futuro.
           </p>
-       <button  className = "deck-button" >
-        "PASADO"
-            <CardBack />
-            </button>
-
+      
+            <CardBack handleClick = {handleClick}/>
+           
         </div>
 
+       
+
+        <SingleCard className = "past-card"
+            imgElement={<img src= "https://i.ibb.co/XxrvMJ2/Reverso-Sakura.jpg"/>}
+            text="PASADO"
+            flipped={flipped}
+          />
+          <SingleCard className = "present-card"
+            imgElement={<img src= "https://i.ibb.co/XxrvMJ2/Reverso-Sakura.jpg"/>}
+            text="PRESENTE"
+            flipped={flipped}
+          />
+          <SingleCard className = "Future-card"
+            imgElement={<img src= "https://i.ibb.co/XxrvMJ2/Reverso-Sakura.jpg"/>}
+            text="FUTURO"
+            flipped={flipped}
+          />
+      
         <div className="cards">
-          <CardContainer />
+{/*          <CardContainer /> */}
           <Button />
         </div>
       </div>
