@@ -1,9 +1,15 @@
-.sngl-card{
-    background-color: var(--bg-color);
-    border: solid white;
-    width: 6 vw;
-    height: 5 vh;
-margin-left: 2 rem;    
-    }
+.single-card {
+  width: 165px;
+  height: 345px;
+  border: 1px dotted white;
+  margin: 0 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-  
+.reverse-img {
+  height: 386px;
+  margin: 9rem, 4rem;
+
+}

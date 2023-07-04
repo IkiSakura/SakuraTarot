@@ -1,20 +1,15 @@
-import React from 'react'
+import React from "react";
+import "../SingleCard/SingleCard.css";
 
-    
-    export default function SingleCard({flipped, imgElement,text}) {
+export default function SingleCard({ flipped, imgElement, text, clase }) {
+  return (
+   <div>
 
-      return (
-        <div >
-          
-          <div className = "sngl-card">
-          {flipped&&imgElement}
-          {text}
-          
-          </div>
-        
-    
-        </div>
-      )
-    }
-    
+      <div className={clase}>
+      {!flipped && text}
+      {flipped && imgElement}
+      </div>
 
+      </div>
+  );
+}

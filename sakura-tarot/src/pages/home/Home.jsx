@@ -8,56 +8,59 @@ import Footer from "../../components/Footer/Footer";
 import SingleCard from "../../components/SingleCard/SingleCard";
 import { useState } from "react";
 
+export default function Home() {
+  const [flippedPast, setFlippedPast] = useState(false);
+  const [flippedPresent, setFlippedPresent] = useState(false);
+  const [flippedFuture, setFlippedFuture] = useState(false);
 
+  function handleClickPast() {
+    setFlippedPast(true);
+  }
+  function handleClickPresent() {
+    setFlippedPresent(true);
+  }
 
-export default function Home () { 
-
-const [flipped, setFlipped] = useState(false)
-
-function handleClick(){
-  setFlipped(true)
-}
+  function handleClickFuture() {
+    setFlippedFuture(true);
+  }
 
   return (
-    
     <div className="home-container">
+      <div className ="header-container">
       <Header />
-      <h2>
-        Seleccione la tarjeta que crea que puede representar su situación actual
-      </h2>
-
+      <h2>Bienvenid@ a nuestro Sakura-Tarot!</h2>
+      <h3>Experimenta su magia con la tirada de las 3 cartas: </h3>
+      </div>
       <div className="tarot-container">
         <div className="instructions">
-          <p>
-            Selecciona 3 cartas para leer sobre tu pasado, presente y futuro.
-          </p>
-      
-            <CardBack handleClick = {handleClick}/>
-           
+          <h3>INSTRUCCIONES:</h3>
+          <p>Por favor, selecciona una carta de cada mazo: </p>
+          <CardBack handleClick={handleClickPast} frase = "Conecta con tu PASADO:" />
+          <CardBack  handleClick={handleClickPresent} frase = "Comprende tu PRESENTE:" />
+          <CardBack  handleClick={handleClickFuture} frase = "Intuye tu FUTURO:"/>
         </div>
-
-       
-
-        <SingleCard className = "past-card"
-            imgElement={<img src= "https://i.ibb.co/XxrvMJ2/Reverso-Sakura.jpg"/>}
-            text="PASADO"
-            flipped={flipped}
-          />
-          <SingleCard className = "present-card"
-            imgElement={<img src= "https://i.ibb.co/XxrvMJ2/Reverso-Sakura.jpg"/>}
-            text="PRESENTE"
-            flipped={flipped}
-          />
-          <SingleCard className = "Future-card"
-            imgElement={<img src= "https://i.ibb.co/XxrvMJ2/Reverso-Sakura.jpg"/>}
-            text="FUTURO"
-            flipped={flipped}
-          />
-      
-        <div className="cards">
-{/*          <CardContainer /> */}
-          <Button />
-        </div>
+        
+<div className = "card-trio">
+        <SingleCard
+          imgElement={<img className="reverse-img" src="https://i.ibb.co/XxrvMJ2/Reverso-Sakura.jpg" />}
+          text="PASADO"
+          clase = "single-card"
+          flipped={flippedPast}
+        />
+        <SingleCard
+          imgElement={<img className="reverse-img" src="https://i.ibb.co/XxrvMJ2/Reverso-Sakura.jpg" />}
+          text="PRESENTE"
+          clase = "single-card"
+          flipped={flippedPresent}
+        />
+        <SingleCard
+          imgElement={<img className="reverse-img" src="https://i.ibb.co/XxrvMJ2/Reverso-Sakura.jpg" />}
+          text="FUTURO"
+          clase = "single-card"
+          flipped={flippedFuture}
+        />
+</div>
+<Button />
       </div>
       <img
         className="sakura-circle"

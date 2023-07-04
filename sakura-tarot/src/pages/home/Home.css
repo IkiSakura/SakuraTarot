@@ -8,6 +8,7 @@ h2{
     font-weight: 100;
     margin-top: 1.5rem;
 }
+
 .tarot-container{
     width: 100%;
     display: flex;
@@ -44,4 +45,16 @@ h2{
 .deck-button{
     padding:0;
     width: 30vw;
+}
+
+.past-card{
+    width: 127px;
+    height: 297px;
+    border: 1px dotted white;
+    margin: 0 1rem;
+}
+
+.card-trio{
+    display:flex;
+    
 }

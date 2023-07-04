@@ -1,24 +1,42 @@
-import React from 'react'
-import './CardBack.css';
+import React from "react";
+import "./CardBack.css";
 
-
-
-
-const CardBack = ({handleClick}) => {
-
+const CardBack = ({ handleClick, frase }) => {
   return (
-   
-        <div className = "deck-card-container">
-            <img  onClick ={handleClick} className ="card-back" src = "https://i.ibb.co/XxrvMJ2/Reverso-Sakura.jpg" alt = "Reverso carta de tarot sakura" />
-            <img className ="card-back" src = "https://i.ibb.co/XxrvMJ2/Reverso-Sakura.jpg" alt = "Reverso carta de tarot sakura" />
-            <img className ="card-back" src = "https://i.ibb.co/XxrvMJ2/Reverso-Sakura.jpg" alt = "Reverso carta de tarot sakura" />
-            <img className ="card-back" src = "https://i.ibb.co/XxrvMJ2/Reverso-Sakura.jpg" alt = "Reverso carta de tarot sakura" />
-            <img className ="card-back" src = "https://i.ibb.co/XxrvMJ2/Reverso-Sakura.jpg" alt = "Reverso carta de tarot sakura" />
-            <img className ="card-back" src = "https://i.ibb.co/XxrvMJ2/Reverso-Sakura.jpg" alt = "Reverso carta de tarot sakura" />
-            </div>
- 
-    
-  )
-}
+    <div className="deck-card-container">
+      <p>{frase}</p>
+      <img
+        onClick={handleClick}
+        className="card-back"
+        src="https://i.ibb.co/XxrvMJ2/Reverso-Sakura.jpg"
+        alt="Reverso carta de tarot sakura"
+      />
+      <img
+        onClick={handleClick}
+        className="card-back"
+        src="https://i.ibb.co/XxrvMJ2/Reverso-Sakura.jpg"
+        alt="Reverso carta de tarot sakura"
+      />
+      <img
+        onClick={handleClick}
+        className="card-back"
+        src="https://i.ibb.co/XxrvMJ2/Reverso-Sakura.jpg"
+        alt="Reverso carta de tarot sakura"
+      />
+      <img
+        onClick={handleClick}
+        className="card-back"
+        src="https://i.ibb.co/XxrvMJ2/Reverso-Sakura.jpg"
+        alt="Reverso carta de tarot sakura"
+      />
+      <img
+        onClick={handleClick}
+        className="card-back"
+        src="https://i.ibb.co/XxrvMJ2/Reverso-Sakura.jpg"
+        alt="Reverso carta de tarot sakura"
+      />
+    </div>
+  );
+};
 
 export default CardBack;
