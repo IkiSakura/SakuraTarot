@@ -1,96 +1,51 @@
-h2{
-    font-weight: 100;
-    margin-top: 1.5rem;
-    color: var(--txt-color);
+.secondary-page{
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+
 }
 
 .reading-container {
     position: relative;
     text-align: center;
-}
+    justify-content: center;
+} 
 
 .middle-circle {
     position: absolute;
     width: 25rem;
-    top: 215px;
+    top: 15%;
+    left: 35%;
     opacity: 0.3;
     z-index: -1;
 }
 
-li {
-    margin: 0px;
-    padding: 0px;
-    list-style: none;
-}
 
-.fullContainerCards{
-    margin-top: 30px;
-    width: 100%;
-    height: 470px;
-    align-items: center;
+.cards-reading{
+    margin: 1rem 0;
+    text-align: center;
     display: flex;
-    justify-content: space-evenly;
-}
-
-.card .front{
-    padding: 8px;
-}
-  
-.fullContainerCards:hover > .card {
-    cursor: pointer;
-    transform: rotateY(180deg);
-}
-  
-.card {
-    height: 468px;
-    width: 212px;
-    position: relative;
-    transition: transform 1500ms;
-    transform-style: preserve-3d;
-}
-  
-.front,
-.back {
-    height: 100%;
-    width: 100%;
-
-    box-shadow: 0 0 5px 2px rgba(50, 50, 50, 0.25);
-    position: absolute;
-    backface-visibility: hidden; 
-}
-  
-.front {
-    transform: rotateY(180deg);
-    display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 5rem;
 }
 
-.container-success-message{
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 2;
-    position: absolute;
-    top: 353px;
-   
+.card-reveal{
+    width: 20%;
 }
-.success-message{
-    border-radius: 10px;
-    width: 40%;
-    height: 80%;
-    gap: 1.5rem;
-    padding: 1rem;
-    display: flex;
-    border: 1px solid var(--accent-color);
-    background-color: var(--bg-color);
-    flex-direction: column;
-    align-items: center;
-   
+
+
+.card-name{
+    color: var(--accent-color);
+    font-weight: bold;
+}
+
+.card-img{
+      width: 40%;
+}
+
+.card-meaning{
+    color: var(--accent-color);
+    font-size: 1rem;
+
 }
 

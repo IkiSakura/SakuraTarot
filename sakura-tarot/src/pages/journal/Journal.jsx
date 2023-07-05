@@ -7,10 +7,14 @@ import "./Journal.css";
 
 export default function Journal() {
 
+    
+
     return (
         <div className="journal-container">
             <Header />
             <h3>30 de Junio 2023</h3>
+
+            
             
             <img
                         className="journal-circle"

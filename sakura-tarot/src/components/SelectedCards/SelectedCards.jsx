@@ -1,18 +1,12 @@
-import React, { useState } from 'react';
-
+import React from 'react';
 
 function SelectedCards({ selectedCards }) {
-    console.log(selectedCards)
   return (
     <div>
-      <h3>Cartas seleccionadas:</h3>
+      <h2>Cartas seleccionadas:</h2>
       <ul>
-        {selectedCards.map((printedCard, index) => (
-          <li key={index}>
-            <div>Sakura Card: {printedCard.sakuraCard}</div>
-            <div>Spanish Name: {printedCard.spanishName}</div>
-            <div>Meaning: {printedCard.meaning}</div>
-          </li>
+        {selectedCards.map((cardId) => (
+          <li key={cardId}>{cardId}</li>
         ))}
       </ul>
     </div>
