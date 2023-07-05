@@ -1,20 +1,32 @@
 import React from "react";
-import './CardsContainer.css'
+import "./CardsContainer.css";
 
-const CardContainer = () => {
+function CardContainer({ clickCount, reverseImageUrl }) {
   return (
     <div className="card-container">
       <div className="past">
-        <p>Past</p>
+        {clickCount >= 1 ? (
+          <img className="card-reverse" src={reverseImageUrl} alt="Reverso carta de tarot sakura" />
+        ) : (
+          <div>Pasado</div>
+        )}
       </div>
       <div className="present">
-        <p>Present</p>
+        {clickCount >= 2 ? (
+          <img className="card-reverse" src={reverseImageUrl} alt="Reverso carta de tarot sakura" />
+        ) : (
+          <div>Presente</div>
+        )}
       </div>
       <div className="future">
-        <p>Future</p>
+        {clickCount >= 3 ? (
+          <img className="card-reverse" src={reverseImageUrl} alt="Reverso carta de tarot sakura" />
+        ) : (
+          <div>Futuro</div>
+        )}
       </div>
     </div>
   );
-};
+}
 
 export default CardContainer;

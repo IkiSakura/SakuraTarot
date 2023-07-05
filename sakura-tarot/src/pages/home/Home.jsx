@@ -8,11 +8,14 @@ import Header from "../../components/header/Header";
 import Footer from "../../components/Footer/Footer";
 
 export default function Home() {
-  const [selectedCards, setSelectedCards] = useState([]);
+  const [clickCount, setClickCount] = useState(0);
+  const maxClicks = 3;
+  const reverseImageUrl = "https://i.ibb.co/XxrvMJ2/Reverso-Sakura.jpg";
 
-  const handleCardClick = (card) => {
-    setSelectedCards((prevSelectedCards) => [...prevSelectedCards, card]);
-    console.log("Cartas seleccionadas:", selectedCards);
+  const handleCardClick = () => {
+    if (clickCount < maxClicks) {
+      setClickCount(clickCount + 1);
+    }
   };
 
   return (
@@ -27,7 +30,7 @@ export default function Home() {
         </div>
 
         <div className="cards">
-          <CardContainer selectedCards={selectedCards} />
+          <CardContainer clickCount={clickCount} reverseImageUrl={reverseImageUrl} />
           <Button text="Ver mi lectura" route="/reading" />
         </div>
       </div>

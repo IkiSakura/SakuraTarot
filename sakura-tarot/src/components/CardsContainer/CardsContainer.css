@@ -1,6 +1,8 @@
 .card-container {
     display: flex;
-    margin-top: 4rem;
+    margin: 4rem 0;
+    gap: 2rem;
+
   }
   
   .past,
@@ -15,3 +17,6 @@
     justify-content: center;
   }
   
+.card-reverse{
+  width: 108%;
+}
