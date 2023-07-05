@@ -65,7 +65,7 @@ export default function Reading() {
     return (
       <div className="secondary-page">
         <Header/>
-            <h2>
+            <h2 className="">
             Pasa tu mano sobre la carta de tarot para revelar su significado.            
             </h2>
         <Button onClick={handleOpenModal} label="Guardar mi lectura" />
