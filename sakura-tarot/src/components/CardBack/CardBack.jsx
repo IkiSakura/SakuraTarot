@@ -2,11 +2,10 @@ import React, { useState, useEffect } from 'react';
 import './CardBack.css';
 import { fetchData } from '../../service/service';
 
-const selectCardsOk = [];
 function CardBack({ onCardClick }) {
   const [randomCards, setRandomCards] = useState([]);
   const [selectedCards, setSelectedCards] = useState([]);
-console.log(selectedCards)
+
   useEffect(() => {
     fetchRandomCards();
   }, []);
@@ -14,19 +13,13 @@ console.log(selectedCards)
   const fetchRandomCards = async () => {
     try {
       const data = await fetchData();
-      //console.log(data)
       const randomIndexes = getRandomIndexes(data.length, 6);
-      console.log(randomIndexes)
       const randomCards = randomIndexes.map(index => data[index]);
-      //const randomCards = randomCards.map(data => data)
-      //console.log(randomCards)
-  
       setRandomCards(randomCards);
     } catch (error) {
       console.error('Error fetching random cards:', error);
     }
   };
-  console.log(randomCards)
 
   const getRandomIndexes = (length, count) => {
     const indexes = Array.from({ length }, (_, index) => index);
@@ -34,28 +27,25 @@ console.log(selectedCards)
     return shuffledIndexes.slice(0, count);
   };
 
-  const handleCardClick = async (cardId) => {
-    if (selectedCards.includes(cardId)) {
-      return; // La carta ya ha sido seleccionada, no hacer nada
-    }
+  const fetchCardDetails = (cardId) => {
+    return randomCards.find(card => card.id === cardId);
+  };
 
-    try {
-      const data = await fetchData();
-      const card = data.find(card => card.id  === cardId);
-      if (card) {
-        console.log('Nueva carta seleccionada:', card);
-        setSelectedCards([...selectedCards, cardId]); // Agregar la carta seleccionada al estado
-        fetchRandomCards(); // Actualizar todas las cartas con una nueva lista aleatoria
+  const handleCardClick = (cardId) => {
+    const selectedCard = randomCards.find(card => card.id === cardId);
+    
+    if (selectedCard && !selectedCards.find(card => card.id === cardId)) {
+      const cardDetails = fetchCardDetails(cardId);
+      if (cardDetails) {
+        setSelectedCards(prevSelectedCards => [...prevSelectedCards, cardDetails]);
         if (typeof onCardClick === 'function') {
-          onCardClick(card);
+          onCardClick(cardDetails);
         }
       }
-    } catch (error) {
-      console.error('Error fetching card:', error);
     }
+    
+    setClickCount(prevClickCount => prevClickCount + 1);
   };
-  console.log('Selected cards:', selectedCards)
- 
 
   return (
     <div className="deck-card-container">
@@ -68,6 +58,20 @@ console.log(selectedCards)
           onClick={() => handleCardClick(card.id)}
         />
       ))}
+      <div>
+        Cartas seleccionadas:
+        {selectedCards.length > 0 ? (
+          selectedCards.map((card, index) => (
+            <div key={index}>g
+              <div>ID: {card.id}</div>
+              <div>Nombre: {card.spanishName}</div>
+              {/* Agrega más detalles de la carta aquí */}
+            </div>
+          ))
+        ) : (
+          <div>No hay cartas seleccionadas</div>
+        )}
+      </div>
     </div>
   );
 }
