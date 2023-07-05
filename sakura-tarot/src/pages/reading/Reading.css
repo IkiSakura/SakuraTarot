@@ -8,13 +8,35 @@ h2{
 
 .reading-container {
     position: relative;
+    text-align: center;
 }
 
+<<<<<<< HEAD
 .middle-circle {
     position: absolute;
     width: 25rem;
     top: 215px;
     opacity: 0.3;
+=======
+.cards-readging{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.cards-open{
+    width: 100px;
+    height:520px;
+}
+
+.middle-circle{
+    position: absolute;
+    width: 30rem;
+    left: 32.4%;
+    top:15%;
+    opacity: 0.5;
+>>>>>>> feature1
     z-index: -1;
 }
 
