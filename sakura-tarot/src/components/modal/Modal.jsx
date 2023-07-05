@@ -12,7 +12,7 @@ function Modal({ onClose, onSave }) {
     <div className="modal">
       <span className="close" onClick={onClose}>X</span>
       <h2>Modal</h2>
-      <p>Fecha actual: {new Date().toLocaleDateString()}</p>
+      <p>{new Date().toLocaleDateString()}</p>
       <textarea
         placeholder="Escribe tus pensamientos..."
         value={thoughts}
