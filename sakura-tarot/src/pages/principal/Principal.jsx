@@ -14,11 +14,11 @@ export default function Principal() {
             <img src={Portada} className="portada-img" alt="Portada Ikisaura Image" /> 
          </div>
          <div className="container-btn-img">
-            <Button/>
+            <Button text='Inicia tu lectura de hoy' to='/home' />
             <img src={Kinomoto} className="kinomoto" alt="Portada Ikisaura Image" /> 
          </div>
          
-        <Footer/>
+         <Footer/>
         </div>
     );
 }
