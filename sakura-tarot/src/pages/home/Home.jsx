@@ -31,7 +31,7 @@ export default function Home() {
 
         <div className="cards">
           <CardContainer clickCount={clickCount} reverseImageUrl={reverseImageUrl} />
-          <Button text="Ver mi lectura" route="/reading" />
+          <Button text='ver mi lectura' to='/reading' />
         </div>
       </div>
       <Footer />
