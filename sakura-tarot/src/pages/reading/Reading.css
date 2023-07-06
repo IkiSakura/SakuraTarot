@@ -38,7 +38,7 @@
 
 .card-name{
     color: var(--accent-color);
-    font-weight: bold;
+    font-weight: regular;
 }
 
 .card-img{

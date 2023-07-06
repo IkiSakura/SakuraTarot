@@ -47,13 +47,13 @@ export default function Reading() {
     <div className="secondary-page">
       <Header />
       <h2 className="title-reading">
-        Desliza el cursor sobre la carta de tarot para revelar su significado.
+       Tu lectura
       </h2>
       <div className="cards-reading">
         {selectedCards.map((card, index) => (
           <div className="card-reveal" key={index}>
             <img className="card-img" src={card.sakuraCard} alt="Sakura Card" />
-            <h3 className="card-name">{card.spanishName}</h3>
+            <h3 className="card-name">{card.spanishName}<span> - {card.kanji}</span></h3>
             <p className="card-meaning">{card.meaning}</p>
           </div>
         ))}

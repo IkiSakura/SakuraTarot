@@ -10,7 +10,7 @@
   .future {
     width: 127px;
     height: 297px;
-    border: 1px dotted white;
+    border: 0.5px solid white;
     margin: 0 1rem;
     display: flex;
     align-items: center;

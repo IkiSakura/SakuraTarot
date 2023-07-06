@@ -18,7 +18,29 @@ h3{
     z-index: -1;
 }
 
+.journal-box{
+    margin: 0 auto;
+    width: 80%;
+   
+    
+}
+
+.journal-reading{
+    margin-bottom: 4rem;
+}
+
 .journal-cards{
     display: flex;
-    
+
+}
+
+.journal-data{
+    color: var(--accent-color);
+    font-weight: regular;
+}
+
+.journal-text{
+    font-size: 1rem;
+    color: var(--txt-color);
+    font-style: italic;
 }
