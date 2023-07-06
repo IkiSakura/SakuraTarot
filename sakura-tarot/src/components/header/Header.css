@@ -27,3 +27,33 @@
 .link-lecturas:hover {
     color: var(--nav-hover);
 }
+
+@media (max-width: 767px) {
+
+.header {
+    position: relative;
+    right: 2.2rem;
+}
+
+.logo-container {
+    display: none;
+}
+
+.link-ikisakura {
+    position: absolute;
+    left: 4rem;
+    top: 2rem;
+    font-size: 0.9rem;
+}
+
+.link-lecturas {
+    position: absolute;
+    right: 8rem;
+    white-space: nowrap;
+    top: 2rem;
+    font-size: 0.9rem;
+
+}
+
+
+}
