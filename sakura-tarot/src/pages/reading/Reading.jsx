@@ -49,6 +49,8 @@ export default function Reading() {
       <h2 className="title-reading">
        Tu lectura
       </h2>
+      <div className='main'>
+    
       <div className="cards-reading">
         {selectedCards.map((card, index) => (
           <div className="card-reveal" key={index}>
@@ -65,15 +67,17 @@ export default function Reading() {
       {successMessage && (
         <div className="container-success-message">
           <div className="success-message">
-            <p>Pensamiento guardado correctamente.</p>
-            <Button text="Cerrar" onClick={() => {
+            <p>Lectura y pensamiento guardados correctamente.</p>
+            
+          </div>
+          <Button text="Cerrar" onClick={() => {
               setSuccessMessage(false);
               handleCloseModal();
             }} />
-          </div>
         </div>
+        
       )}
-      
+      </div>
       <Footer />
     </div>
   );

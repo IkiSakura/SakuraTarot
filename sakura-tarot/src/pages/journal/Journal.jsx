@@ -10,7 +10,8 @@ export default function Journal() {
   useEffect(() => {
     const storedData = localStorage.getItem('journalData');
     if (storedData) {
-      setJournalData(JSON.parse(storedData));
+      const parsedData = JSON.parse(storedData);
+      setJournalData(parsedData.reverse());
     }
   }, []);
 
@@ -28,12 +29,19 @@ export default function Journal() {
     localStorage.setItem('selectedCards', JSON.stringify(filteredSelectedCards));
 
     // Actualizar el local storage
-    localStorage.setItem('journalData', JSON.stringify(updatedJournalData));
+    localStorage.setItem('journalData', JSON.stringify(updatedJournalData.reverse()));
+  };
+
+  const handleSaveEntry = (newEntry) => {
+    const updatedJournalData = [newEntry, ...journalData];
+    setJournalData(updatedJournalData);
+    localStorage.setItem('journalData', JSON.stringify(updatedJournalData.reverse()));
   };
 
   return (
     <div className="journal-container">
       <Header />
+      <div className='main'>
       <h2>Consulta tus lecturas anteriores</h2>
       <div className='journal-box'>
         {journalData.map((data, index) => (
@@ -54,8 +62,10 @@ export default function Journal() {
           </div>
         ))}
       </div>
-     
-          <Footer />
+
+      </div>
+      <Footer />
+
     </div>
   );
 }
