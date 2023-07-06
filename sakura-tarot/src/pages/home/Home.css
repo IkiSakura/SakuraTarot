@@ -1,5 +1,5 @@
 .home-container{
-    color: white;
+    color: var(--txt-color);
     text-align: center;
     font-weight: regular;
     position: relative;

@@ -27,7 +27,7 @@ function Modal({ onClose, onSave }) {
           value={thoughts}
           onChange={(e) => setThoughts(e.target.value)}
         ></textarea>
-        <Button text="Guardar" onClick={handleSave}/>
+        <Button text="Guardar en mis lecturas" onClick={handleSave}/>
         {/* <button onClick={handleSave}>Guardar</button> */}
       </div>
       </div>

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Header from "../../components/header/Header";
-import Button from "../../components/btn/BtnModal";
+import Button from "../../components/Button/Button";
 import Footer from "../../components/Footer/Footer";
 import CirgleImage from "../../assets/img/sakura-circulo.svg";
 import Modal from "../../components/modal/Modal";
@@ -77,9 +77,8 @@ export default function Reading() {
   return (
     <div className="secondary-page">
       <Header />
-  
+      <h2 className="title-reading">Desliza el cursor sobre la carta de tarot para revelar su significado.</h2> 
       <div className="cards-reading">
-  
       {selectedCards.map((card, index) => (
         <div className="card-reveal" key={index}>
             <img className="card-img" src={card.sakuraCard} alt="Sakura Card" />
@@ -89,24 +88,30 @@ export default function Reading() {
         </div>
       ))}
     </div>
-      <Button onClick={handleOpenModal} label="Guardar mi lectura" />
-      {modalOpen && (
+      <div className="container-button-reading">
+        <Button text="Guardar" onClick={handleOpenModal}/>
+        {/* <Button onClick={handleOpenModal} label="Guardar mi lectura" /> */}
+        {modalOpen && (
         <Modal onClose={handleCloseModal} onSave={handleSaveThoughts} />
-      )}
+        )}
+      </div>
       {thoughtsListOpen && (
         <div>
           <ThoughtsList thoughts={savedThoughts} onDelete={handleDeleteThought} />
-          <Button onClick={handleCloseThoughtsList} label="X" />
+          <Button text="X" onClick={handleCloseThoughtsList}/>
+          {/* <Button onClick={handleCloseThoughtsList} label="X" /> */}
         </div>
       )}
       {!thoughtsListOpen && savedThoughts.length > 0 && (
-        <Button onClick={handleAccessThoughts} label="Acceder a mis pensamientos guardados" />
+        <Button text="Acceder a mis pensamientos guardados" onClick={handleAccessThoughts}/>
+        // <Button onClick={handleAccessThoughts} label="Acceder a mis pensamientos guardados" />
       )}
       {successMessage && (
         <div className="container-success-message">
           <div className="success-message">
             <p>Pensamiento guardado correctamente.</p>
-            <Button onClick={() => setSuccessMessage(false)} label="Cerrar" />
+            <Button text="Cerrar" onClick={() => setSuccessMessage(false)}/>
+            {/* <Button onClick={() => setSuccessMessage(false)} label="Cerrar" /> */}
           </div>
         </div>
       )}
