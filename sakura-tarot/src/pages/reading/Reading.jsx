@@ -1,40 +1,22 @@
-import React, { useState, useEffect } from "react";
-import Header from "../../components/header/Header";
-import Button from "../../components/Button/Button";
-import Footer from "../../components/Footer/Footer";
-import CirgleImage from "../../assets/img/sakura-circulo.svg";
-import Modal from "../../components/modal/Modal";
-import ThoughtsList from "../../components/thougtList/ThoughtsList";
-import "./Reading.css";
+import React, { useState, useEffect } from 'react';
+import Header from '../../components/header/Header';
+import Button from '../../components/Button/Button';
+import Footer from '../../components/Footer/Footer';
+import CirgleImage from '../../assets/img/sakura-circulo.svg';
+import Modal from '../../components/modal/Modal';
+import './Reading.css';
 
-
-  
-
-  
 export default function Reading() {
   const [modalOpen, setModalOpen] = useState(false);
-  const [savedThoughts, setSavedThoughts] = useState([]);
-  const [thoughtsListOpen, setThoughtsListOpen] = useState(false);
-  const [successMessage, setSuccessMessage] = useState(false);
   const [selectedCards, setSelectedCards] = useState([]);
-  
+  const [successMessage, setSuccessMessage] = useState(false);
+
   useEffect(() => {
     const storedCards = localStorage.getItem('selectedCards');
     if (storedCards) {
       setSelectedCards(JSON.parse(storedCards));
     }
   }, []);
-
-  useEffect(() => {
-    const storedThoughts = localStorage.getItem('savedThoughts');
-    if (storedThoughts) {
-      setSavedThoughts(JSON.parse(storedThoughts));
-    }
-  }, []);
-
-  useEffect(() => {
-    localStorage.setItem('savedThoughts', JSON.stringify(savedThoughts));
-  }, [savedThoughts]);
 
   const handleOpenModal = () => {
     setModalOpen(true);
@@ -50,72 +32,44 @@ export default function Reading() {
       text: thoughts,
       selectedCards: selectedCards,
     };
-    setSavedThoughts((prevThoughts) => [...prevThoughts, newThought]);
-    setSelectedCards([]);
+    // Guardar el nuevo pensamiento en localStorage o donde corresponda
     setSuccessMessage(true);
     setTimeout(() => {
       setSuccessMessage(false);
     }, 4000);
   };
 
-  const handleAccessThoughts = () => {
-    setThoughtsListOpen(true);
-  };
-
-  const handleCloseThoughtsList = () => {
-    setThoughtsListOpen(false);
-  };
-
   const handleDeleteThought = (index) => {
-    setSavedThoughts((prevThoughts) => {
-      const updatedThoughts = [...prevThoughts];
-      updatedThoughts.splice(index, 1);
-      return updatedThoughts;
-    });
+    // Eliminar el pensamiento del estado o de donde corresponda
   };
 
   return (
     <div className="secondary-page">
       <Header />
-      <h2 className="title-reading">Desliza el cursor sobre la carta de tarot para revelar su significado.</h2> 
+      <h2 className="title-reading">
+        Desliza el cursor sobre la carta de tarot para revelar su significado.
+      </h2>
       <div className="cards-reading">
-      {selectedCards.map((card, index) => (
-        <div className="card-reveal" key={index}>
+        {selectedCards.map((card, index) => (
+          <div className="card-reveal" key={index}>
             <img className="card-img" src={card.sakuraCard} alt="Sakura Card" />
             <h3 className="card-name">{card.spanishName}</h3>
             <p className="card-meaning">{card.meaning}</p>
-         
-        </div>
-      ))}
-    </div>
-      <div className="container-button-reading">
-        <Button text="Guardar" onClick={handleOpenModal}/>
-        {/* <Button onClick={handleOpenModal} label="Guardar mi lectura" /> */}
-        {modalOpen && (
-        <Modal onClose={handleCloseModal} onSave={handleSaveThoughts} />
-        )}
+          </div>
+        ))}
       </div>
-      {thoughtsListOpen && (
-        <div>
-          <ThoughtsList thoughts={savedThoughts} onDelete={handleDeleteThought} />
-          <Button text="X" onClick={handleCloseThoughtsList}/>
-          {/* <Button onClick={handleCloseThoughtsList} label="X" /> */}
-        </div>
-      )}
-      {!thoughtsListOpen && savedThoughts.length > 0 && (
-        <Button text="Acceder a mis pensamientos guardados" onClick={handleAccessThoughts}/>
-        // <Button onClick={handleAccessThoughts} label="Acceder a mis pensamientos guardados" />
-      )}
+      <div className="container-button-reading">
+        <Button text="Guardar" onClick={handleOpenModal} />
+        {modalOpen && <Modal onClose={handleCloseModal} onSave={handleSaveThoughts} />}
+      </div>
       {successMessage && (
         <div className="container-success-message">
           <div className="success-message">
             <p>Pensamiento guardado correctamente.</p>
-            <Button text="Cerrar" onClick={() => setSuccessMessage(false)}/>
-            {/* <Button onClick={() => setSuccessMessage(false)} label="Cerrar" /> */}
+            <Button text="Cerrar" onClick={() => setSuccessMessage(false)} />
           </div>
         </div>
       )}
-    
       <img
         className="middle-circle"
         src={CirgleImage}

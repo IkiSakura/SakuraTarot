@@ -18,3 +18,7 @@ h3{
     z-index: -1;
 }
 
+.journal-cards{
+    display: flex;
+    
+}
