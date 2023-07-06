@@ -1,13 +1,8 @@
 .header {
     display: flex;
-    justify-content: flex-end;
     align-items: center;
     justify-content: space-between;
     padding: 1rem 4rem 1rem;
-}
-.logo-container{
-    display: flex;
-    align-items: center;
 }
 
 .link-ikisakura{
@@ -31,8 +26,7 @@
 @media (max-width: 767px) {
 
 .header {
-    position: relative;
-    right: 2.2rem;
+    padding: 3rem 2rem ;
 }
 
 .logo-container {
@@ -40,18 +34,12 @@
 }
 
 .link-ikisakura {
-    position: absolute;
-    left: 4rem;
-    top: 2rem;
-    font-size: 0.9rem;
+    font-size: 1.3rem;
 }
 
 .link-lecturas {
-    position: absolute;
-    right: 8rem;
+    font-size: 1.3rem;
     white-space: nowrap;
-    top: 2rem;
-    font-size: 0.9rem;
 
 }
 
