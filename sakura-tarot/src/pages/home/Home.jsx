@@ -3,7 +3,6 @@ import "./Home.css";
 import CardContainer from "../../components/CardsContainer/CardsContainer";
 import Button from "../../components/Button/Button";
 import CardBack from "../../components/CardBack/CardBack";
-// import CirgleImage from "../../assets/img/sakura-circulo.svg";
 import Header from "../../components/header/Header";
 import Footer from "../../components/Footer/Footer";
 

@@ -67,13 +67,12 @@ export default function Reading() {
       {successMessage && (
         <div className="container-success-message">
           <div className="success-message">
-            <p>Lectura y pensamiento guardados correctamente.</p>
-            
-          </div>
-          <Button text="Cerrar" onClick={() => {
-              setSuccessMessage(false);
-              handleCloseModal();
+            <p className='text-success'>Lectura y pensamiento guardados correctamente.</p>
+            <Button text="Cerrar" onClick={() => {
+            setSuccessMessage(false);
+            handleCloseModal();
             }} />
+          </div>
         </div>
         
       )}
