@@ -9,20 +9,10 @@ h3{
     font-weight: 100;
 }
 
-.journal-circle{
-    position: absolute;
-    width: 40rem;
-    left: 70%;
-    top:15%;
-    opacity: 0.5;
-    z-index: -1;
-}
 
 .journal-box{
     margin: 0 auto;
     width: 80%;
-   
-    
 }
 
 .journal-reading{

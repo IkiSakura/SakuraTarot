@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import Header from '../../components/header/Header';
 import Button from '../../components/Button/Button';
 import Footer from '../../components/Footer/Footer';
-import CirgleImage from '../../assets/img/sakura-circulo.svg';
 import Modal from '../../components/modal/Modal';
 import './Reading.css';
 
@@ -70,11 +69,7 @@ export default function Reading() {
           </div>
         </div>
       )}
-      <img
-        className="middle-circle"
-        src={CirgleImage}
-        alt="Sakura golden card circle"
-      />
+      
       <Footer />
     </div>
   );

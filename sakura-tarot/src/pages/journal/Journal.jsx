@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Header from '../../components/header/Header';
 import Footer from '../../components/Footer/Footer';
-import CirgleImage from '../../assets/img/sakura-circulo.svg';
 import './Journal.css';
 import Button from '../../components/Button/Button';
 
@@ -55,11 +54,7 @@ export default function Journal() {
           </div>
         ))}
       </div>
-      <img
-        className="journal-circle"
-        src={CirgleImage}
-        alt="Sakura golden card circle"
-      />
+     
           <Footer />
     </div>
   );
