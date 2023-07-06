@@ -36,6 +36,7 @@ export default function Reading() {
     setSuccessMessage(true);
     setTimeout(() => {
       setSuccessMessage(false);
+      handleCloseModal(); // Cerrar el modal
     }, 4000);
   };
 
@@ -66,7 +67,10 @@ export default function Reading() {
         <div className="container-success-message">
           <div className="success-message">
             <p>Pensamiento guardado correctamente.</p>
-            <Button text="Cerrar" onClick={() => setSuccessMessage(false)} />
+            <Button text="Cerrar" onClick={() => {
+              setSuccessMessage(false);
+              handleCloseModal();
+            }} />
           </div>
         </div>
       )}
