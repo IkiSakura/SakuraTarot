@@ -19,7 +19,7 @@ El objetivo de **IkiSahura** es hacer una aplicación que consuma la API de Saku
 **El usuario podrá escoger una carta para el pasado, otra para el presente y otra para el futuro,** después podrá obtener el significado de cada carta que ha elegido para luego poder guardarlo.
 
 ## UI
-
+[Sistema de diseño y maquetación version Desktop y Mobile](https://www.figma.com/file/o9LxOdu3XHBvOSeSWKLjiT/Sakura-Tarot?type=design&node-id=1%3A5&mode=design&t=AQi7LML8PfDaB1ux-1)
 
 
 ## Tecnologías
