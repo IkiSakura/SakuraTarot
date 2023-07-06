@@ -15,7 +15,7 @@ export default function Principal() {
          </div>
          <div className="container-btn-img">
             <Button text='Inicia tu lectura de hoy' to='/home' />
-            <img src={Kinomoto} className="kinomoto" alt="Portada Ikisaura Image" /> 
+            <img src={Kinomoto} className="kinomoto" alt="Mascota Kerobero Portada Ikisaura Image" /> 
          </div>
          
          <Footer/>

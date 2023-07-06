@@ -29,7 +29,7 @@ function Modal({ onClose, onSave }) {
         <button className="close" onClick={onClose}>
           <img className="close-img" src={IconClose} alt="icono de cerrar" />
         </button>
-        <img className="kinomoto-modal" src={Kinomoto} alt="" />
+        <img className="kinomoto-modal" src={Kinomoto} alt="mascota sakura kerobero" />
         <h2 className="title-modal">¿Cómo te has sentido hoy?</h2>
         <div className="container-box-btn">
           <p>Fecha actual: {new Date().toLocaleDateString()}</p>
