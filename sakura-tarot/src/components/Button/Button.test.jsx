@@ -26,7 +26,7 @@ test('renders button with correct link', () => {
     </Router>
   );
 
-  const LinkButton = screen.getByAttribute('button')
+  const LinkButton = screen.getByRole('button')
   fireEvent.click(LinkButton[0]);
 
   expect(ButtonLink.getAttribute('text')).to.equal('Ver mi lectura');
