@@ -20,7 +20,7 @@
 }
 
 
-.cards-reading{
+.cards-reading {
     margin: 1rem 0;
     padding-top: 1rem;
     gap: 1rem;
@@ -83,5 +83,68 @@
     background-color: var(--bg-color);
     flex-direction: column;
     align-items: center;
+}
+
+
+@media (max-width: 767px) {
+.title-reading {
+    font-size: 1.1rem;
+    position: relative;
+    top: 4rem;
+    width: 60%;
+    text-align:left;
+    left: 1.5rem;
+    flex-wrap: wrap;
+    display: flex;
+    
+}
+
+.middle-circle {
+    width: 15rem;
+    left: 8rem;
+    top: 15rem;
+    transform: translateX(-50%);
+}
+
+.cards-reading {
+    font-size: 1rem;
+    right: 7rem;
+    position: absolute;
+    align-items: flex-start;
+    gap: 0.5rem;
+    top: 9rem;
+  }
+
+.card-reveal{
+    width: 100%;
+    margin-left: 2rem;
+    left: 1rem;
+    flex: 1;
+}
+
+.card-img{
+      width: 50%;
+      left: 2rem;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      position: relative;
+      gap: 1rem;
+    
+}
+
+.card-meaning{
+    font-size: 0.6rem;
+       
+}
+
+.container-button-reading {
+    width: 10%;
+    left: 7rem;
+    position: relative;
+    top: 24rem;
+
+}
+
 }
 
