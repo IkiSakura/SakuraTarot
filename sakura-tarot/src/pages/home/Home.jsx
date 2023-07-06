@@ -24,7 +24,7 @@ export default function Home() {
       <h2>Seleccione la tarjeta que crea que puede representar su situación actual</h2>
       <div className="tarot-container">
         <div className="instructions">
-          <p>Selecciona 3 cartas para leer sobre tu pasado, presente y futuro.</p>
+          <p>Haz click en 3 cartas para leer sobre tu pasado, presente y futuro.</p>
           <CardBack onCardClick={handleCardClick} />
         </div>
 

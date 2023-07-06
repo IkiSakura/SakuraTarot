@@ -23,3 +23,27 @@
     margin-left: 4rem;
 }
 
+@media only screen and (max-width:767px) {
+    .portada-img{
+        width: 90%;
+        height: auto; 
+    }
+    .kinomoto{
+        width: 20%;
+        height: auto;
+        margin-bottom: 1rem;
+    }
+    
+    .container-portada{
+        margin-top: 12rem;
+    }
+
+    .container-btn-img{
+        padding: 1rem;
+        margin-left: 3rem;
+    }
+
+
+}
+
+
