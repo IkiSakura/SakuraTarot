@@ -3,7 +3,6 @@ import "./Home.css";
 import CardContainer from "../../components/CardsContainer/CardsContainer";
 import Button from "../../components/Button/Button";
 import CardBack from "../../components/CardBack/CardBack";
-// import CirgleImage from "../../assets/img/sakura-circulo.svg";
 import Header from "../../components/header/Header";
 import Footer from "../../components/Footer/Footer";
 
@@ -24,7 +23,7 @@ export default function Home() {
       <h2>Seleccione la tarjeta que crea que puede representar su situación actual</h2>
       <div className="tarot-container">
         <div className="instructions">
-          <p>Selecciona 3 cartas para leer sobre tu pasado, presente y futuro.</p>
+          <p>Haz click en 3 cartas para leer sobre tu pasado, presente y futuro.</p>
           <CardBack onCardClick={handleCardClick} />
         </div>
 

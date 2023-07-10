@@ -37,7 +37,7 @@ function CardBack({ onCardClick }) {
 
   const handleCardClick = async (cardId) => {
     if (selectedCards.some(card => card.id === cardId)) {
-      return; // La carta ya ha sido seleccionada, no hacer nada
+      return; 
     }
 
     try {
