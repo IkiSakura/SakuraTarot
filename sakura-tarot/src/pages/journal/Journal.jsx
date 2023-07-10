@@ -29,11 +29,7 @@ export default function Journal() {
     localStorage.setItem('journalData', JSON.stringify(updatedJournalData.reverse()));
   };
 
-  // const handleSaveEntry = (newEntry) => {
-  //   const updatedJournalData = [newEntry, ...journalData];
-  //   setJournalData(updatedJournalData);
-  //   localStorage.setItem('journalData', JSON.stringify(updatedJournalData.reverse()));
-  // };
+ 
 
   return (
     <div className="journal-container">
