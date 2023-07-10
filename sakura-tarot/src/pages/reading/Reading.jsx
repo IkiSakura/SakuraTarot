@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import Header from '../../components/header/Header';
 import Button from '../../components/Button/Button';
 import Footer from '../../components/Footer/Footer';
-import CirgleImage from '../../assets/img/sakura-circulo.svg';
 import Modal from '../../components/modal/Modal';
 import './Reading.css';
 
@@ -32,23 +31,23 @@ export default function Reading() {
       text: thoughts,
       selectedCards: selectedCards,
     };
-    // Guardar el nuevo pensamiento en localStorage o donde corresponda
+    
     setSuccessMessage(true);
     setTimeout(() => {
       setSuccessMessage(false);
+      handleCloseModal(); 
     }, 4000);
   };
 
-  const handleDeleteThought = (index) => {
-    // Eliminar el pensamiento del estado o de donde corresponda
-  };
-
+  
   return (
     <div className="secondary-page">
       <Header />
       <h2 className="title-reading">
        Tu lectura
       </h2>
+      <div className='main'>
+    
       <div className="cards-reading">
         {selectedCards.map((card, index) => (
           <div className="card-reveal" key={index}>
@@ -65,16 +64,16 @@ export default function Reading() {
       {successMessage && (
         <div className="container-success-message">
           <div className="success-message">
-            <p>Pensamiento guardado correctamente.</p>
-            <Button text="Cerrar" onClick={() => setSuccessMessage(false)} />
+            <p className='text-success'>Lectura y pensamiento guardados correctamente.</p>
+            <Button text="Cerrar" onClick={() => {
+            setSuccessMessage(false);
+            handleCloseModal();
+            }} />
           </div>
         </div>
+        
       )}
-      <img
-        className="middle-circle"
-        src={CirgleImage}
-        alt="Sakura golden card circle"
-      />
+      </div>
       <Footer />
     </div>
   );

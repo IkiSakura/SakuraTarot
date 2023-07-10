@@ -1,37 +1,29 @@
 .journal-container{
     text-align: center;
     color: var(--txt-color);
-    overflow: hidden;
+    height: 100vh;
 }
 
-h3{
-    padding-top: 3rem;
-    font-weight: 100;
-}
-
-.journal-circle{
-    position: absolute;
-    width: 40rem;
-    left: 70%;
-    top:15%;
-    opacity: 0.5;
-    z-index: -1;
+.journal-main{
+    display: flex;
+   flex-direction: column;;
+    justify-content: center;
 }
 
 .journal-box{
     margin: 0 auto;
-    width: 80%;
-   
-    
+    width: 90%;
+    height: 100vh;
+}
+
+
+h3{
+    padding-top: 1rem;
+    font-weight: 100;
 }
 
 .journal-reading{
     margin-bottom: 4rem;
-}
-
-.journal-cards{
-    display: flex;
-
 }
 
 .journal-data{
@@ -43,4 +35,12 @@ h3{
     font-size: 1rem;
     color: var(--txt-color);
     font-style: italic;
+}
+
+@media (max-width: 767px) {
+
+    .journal-data, .journal-text{
+        text-align: center;
+    }
+     
 }

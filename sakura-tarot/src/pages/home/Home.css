@@ -42,4 +42,31 @@ h2{
     opacity: 0.5;
     z-index: -1;
 }
+@media only screen and (max-width:767px) {
+    h2{
+        font-size: 22px;
+        font-weight: 700;
+        text-align: left;
+        padding: 1.5rem 2rem;
+        margin: 0;
+    }
 
+    .tarot-container{
+        padding: 2rem;
+        gap: 1rem;
+        flex-direction: column;
+    }
+    .instructions{
+        margin-left: 0;
+    }
+
+    p{
+        font-size: 1.2rem;  
+        padding: 0.5rem;
+        text-align: left;
+    }
+    .cards{
+        gap: 2rem;
+    }
+
+}
