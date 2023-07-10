@@ -1,9 +1,9 @@
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
-/*import { MemoryRouter } from 'react-router-dom';*/
 import { BrowserRouter as Router } from 'react-router-dom';
-import { createMemoryHistory } from 'history';
-import {expect, toBeInTheDocument} from 'chai';
+import {expect } from 'chai';
+import chai from 'chai';
+import chaiDom from 'chai-dom';
 import Modal from './Modal';
 
 describe('Component Modal', () => {
@@ -23,7 +23,7 @@ describe('Component Modal', () => {
   });
 
   test('Modal icon should have the correct icon and alt text ', () => {
-    const iconButton = screen.getByClass("close-img");
+    const iconButton = screen.getByTestId("close-icon-modal");
 
     expect(iconButton).toHaveAttribute('src', "icon-close.svg");
     expect(iconButton).toHaveAttribute('alt', "icono de cerrar");
