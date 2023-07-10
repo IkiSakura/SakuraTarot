@@ -16,27 +16,24 @@ export default function Journal() {
   }, []);
 
   const handleDeleteEntry = (index) => {
-    // Eliminar la entrada del diario del estado
     const updatedJournalData = [...journalData];
     const deletedEntry = updatedJournalData.splice(index, 1)[0];
     setJournalData(updatedJournalData);
 
-    // Eliminar las cartas asociadas a la entrada del local storage
     const updatedSelectedCards = JSON.parse(localStorage.getItem('selectedCards')) || [];
     const filteredSelectedCards = updatedSelectedCards.filter((card) => {
       return !deletedEntry.selectedCards.find((deletedCard) => deletedCard.spanishName === card.spanishName);
     });
     localStorage.setItem('selectedCards', JSON.stringify(filteredSelectedCards));
 
-    // Actualizar el local storage
     localStorage.setItem('journalData', JSON.stringify(updatedJournalData.reverse()));
   };
 
-  const handleSaveEntry = (newEntry) => {
-    const updatedJournalData = [newEntry, ...journalData];
-    setJournalData(updatedJournalData);
-    localStorage.setItem('journalData', JSON.stringify(updatedJournalData.reverse()));
-  };
+  // const handleSaveEntry = (newEntry) => {
+  //   const updatedJournalData = [newEntry, ...journalData];
+  //   setJournalData(updatedJournalData);
+  //   localStorage.setItem('journalData', JSON.stringify(updatedJournalData.reverse()));
+  // };
 
   return (
     <div className="journal-container">

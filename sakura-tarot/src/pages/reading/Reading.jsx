@@ -31,18 +31,15 @@ export default function Reading() {
       text: thoughts,
       selectedCards: selectedCards,
     };
-    // Guardar el nuevo pensamiento en localStorage o donde corresponda
+    
     setSuccessMessage(true);
     setTimeout(() => {
       setSuccessMessage(false);
-      handleCloseModal(); // Cerrar el modal
+      handleCloseModal(); 
     }, 4000);
   };
 
-  const handleDeleteThought = (index) => {
-    // Eliminar el pensamiento del estado o de donde corresponda
-  };
-
+  
   return (
     <div className="secondary-page">
       <Header />

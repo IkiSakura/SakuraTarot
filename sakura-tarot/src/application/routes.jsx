@@ -1,8 +1,8 @@
 import React from 'react'
-import { BrowserRouter, Routes, Route, Router } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import Home from "../pages/home/Home"
 import Reading from '../pages/reading/Reading';
-import Journal from "../pages/journal/Journal"
+import Journal from "../pages/journal/Journal";
 import Principal from '../pages/principal/Principal';
 
 

@@ -2,9 +2,8 @@
     text-align: center;
     color: var(--txt-color);
     height: 100vh;
-    
-    
 }
+
 .journal-main{
     display: flex;
    flex-direction: column;;
@@ -15,7 +14,6 @@
     margin: 0 auto;
     width: 90%;
     height: 100vh;
-    
 }
 
 
@@ -23,8 +21,6 @@ h3{
     padding-top: 1rem;
     font-weight: 100;
 }
-
-
 
 .journal-reading{
     margin-bottom: 4rem;
@@ -39,7 +35,6 @@ h3{
     font-size: 1rem;
     color: var(--txt-color);
     font-style: italic;
-    
 }
 
 @media (max-width: 767px) {
