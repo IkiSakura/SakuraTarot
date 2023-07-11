@@ -1,0 +1,14 @@
+.footer-image {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 16%;
+}
+
+@media (max-width: 767px) {
+
+.footer-image {
+    display: none;
+}
+}                            
+        

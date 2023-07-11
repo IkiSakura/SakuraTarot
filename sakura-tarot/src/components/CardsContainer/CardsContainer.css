@@ -1,0 +1,39 @@
+.card-container {
+  margin: 4rem 0;
+  gap: 2rem;
+  display: flex;
+}
+
+  .past,
+  .present,
+  .future {
+    width: 127px;
+    height: 297px;
+    border: 0.5px solid var(--txt-color);
+    margin: 0 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+.card-reverse{
+  width: 108%;
+}
+
+@media only screen and (max-width:767px) {
+
+  .card-container {
+    gap: 1rem;
+    margin: 1rem 0;
+    
+  }
+
+  .past,
+  .present,
+  .future {
+    width: 90px;
+    height: 211px;
+    margin: 0;
+  }
+
+}

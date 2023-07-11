@@ -10,12 +10,11 @@
 }
 
 :root {
-
   --bg-color: #432941;
   --txt-color: #ffffff;
   --accent-color:#f8c0c9;
+  --nav-hover: #C2964F;
   --secondary-color: #a98346;
-
 }
 
 body{
