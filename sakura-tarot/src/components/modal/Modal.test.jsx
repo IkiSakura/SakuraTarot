@@ -2,8 +2,6 @@ import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import {expect } from 'chai';
-import chai from 'chai';
-import chaiDom from 'chai-dom';
 import Modal from './Modal';
 
 describe('Component Modal', () => {
@@ -62,7 +60,7 @@ describe('Component Modal', () => {
     fireEvent.change(textInput, { target: { value: 'Me siento esperanzada' } });
     fireEvent.click(screen.getByText("Guardar en mis lecturas"));
 
-    expect(screen.getByText('You have successfully registered')).toBeTruthy();
+    expect(screen.getByText('Lectura y pensamientos guardados correctamente')).toBeTruthy();
     expect(textInput.value).toBe('');
   });
 });
