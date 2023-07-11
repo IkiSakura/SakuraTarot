@@ -1,49 +1,67 @@
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
+import { BrowserRouter as Router } from 'react-router-dom';
+import {expect } from 'chai';
 import Modal from './Modal';
 
 describe('Component Modal', () => {
   beforeEach(() => {
-    render(<Modal />);
+    render(
+      <Router>
+        <Modal />
+      </Router>
+    );
   });
 
+  test('close modal button renders correctly', () => {
+    const iconButton = screen.getByAltText("icono de cerrar");
 
-  test ('close modal button renders correctly', () => {
+    expect(iconButton).toHaveAttribute('src', "icon-close.svg");
+    expect(iconButton).toBeInTheDocument();
+  });
 
+  test('Modal icon should have the correct icon and alt text ', () => {
+    const iconButton = screen.getByTestId("close-icon-modal");
 
-    
-  })
-  test('text submission', () => {
-    expect(screen.getByRole('button', {text: "Guardar en mis lecturas"})).toBeDefined();
+    expect(iconButton).toHaveAttribute('src', "icon-close.svg");
+    expect(iconButton).toHaveAttribute('alt', "icono de cerrar");
+  });
+
+  test('boton guardar', () => {
+    expect(screen.getByText("Guardar en mis lecturas")).toBeDefined();
   });
 
   test('submit elements', () => {
-    const modalButton = screen.getByRole('button', {text: "Guardar en mis lecturas"});
+    const modalButton = screen.getByText("Guardar en mis lecturas")
     fireEvent.click(modalButton);
 
     expect(screen.getByText('You have successfully registered')).toBeTruthy();
   });
 
-  test('submit text from "pensamientos" with string', () => {
-    const textInput = screen.getByRole('textarea');
-    
-    fireEvent.change(textInput, { target: { value: 'Me siento esperanzada' } });
-    fireEvent.click(screen.getByRole('button', { text: "Guardar en mis lecturas" }));
-
-    expect(screen.getByText('You have successfully registered')).toBeTruthy();
-    expect(textInput.value).toBe('');
-    
-  });
-
-  
-  test('should render the Kerobero image', () => {
+  test('should render correctly the kerobero image', () => {
     const imgKerobero = screen.getByAltText("mascota sakura kerobero");
-    expect(imgKerobero).toBeInTheDocument();
-  });
 
-  test('should have the correct alt text for the kerobero image', () => {
-    const imgKerobero = screen.getByRole('img', { className:"kinomoto-modal" });
+    expect(imgKerobero).toBeInTheDocument();
     expect(imgKerobero).toHaveAttribute('alt', "mascota sakura kerobero");
   });
 
+  test('updates thoughts state when typing in the textarea', () => {
+    const { getByPlaceholderText } = render(<Modal />);
+    const textarea = getByPlaceholderText('Escribe aquí tus pensamientos...');
+
+    fireEvent.change(textarea, { target: { value: 'Nuevo pensamiento' } });
+
+    expect(textarea.value).toBe('Nuevo pensamiento');
+  });
+
+  test('submit text from "pensamientos" with string', () => {
+    const textInput = screen.getByRole('textarea');
+
+    fireEvent.change(textInput, { target: { value: 'Me siento esperanzada' } });
+    fireEvent.click(screen.getByText("Guardar en mis lecturas"));
+
+    expect(screen.getByText('Lectura y pensamientos guardados correctamente')).toBeTruthy();
+    expect(textInput.value).toBe('');
+  });
 });
+

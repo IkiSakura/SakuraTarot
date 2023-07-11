@@ -18,10 +18,8 @@ describe('Component Principal', () => {
   });
   
   test('should render the Logo Image', () => {
-
     const LogoImg = screen.getByAltText("Portada Ikisaura Image");
     expect(LogoImg).toBeInTheDocument();
-
   });
 
 

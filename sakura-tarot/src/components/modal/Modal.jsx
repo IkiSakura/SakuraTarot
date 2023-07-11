@@ -27,7 +27,7 @@ function Modal({ onClose, onSave }) {
     <div className="container-modal">
       <div className="modal">
         <button className="close" onClick={onClose}>
-          <img className="close-img" src={IconClose} alt="icono de cerrar" />
+          <img data-testid= "close-icon-modal" className="close-img" src={IconClose} alt="icono de cerrar" />
         </button>
         <img className="kinomoto-modal" src={Kinomoto} alt="mascota sakura kerobero" />
         <h2 className="title-modal">¿Cómo te has sentido hoy?</h2>
