@@ -3,13 +3,12 @@ import { render, screen } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
 import Footer from './Footer';
 import '@testing-library/jest-dom/extend-expect';
-import Home from '../../pages/home/Home';
 
-describe('Component Home', () => {
+describe('Component Footer', () => {
   beforeEach(() => {
     render(
       <MemoryRouter>
-        <Home />
+        <Footer />
       </MemoryRouter>
     );
   });
